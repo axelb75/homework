@@ -1,10 +1,37 @@
-quantity = int(input('Кол-во товаров: '))
-list_prices = [float(input(f'Цена на {i + 1} товар: ')) for i in range(quantity)]
+print('Задача 1. Список чётных чисел')
 
-first_year = int(input('Повышение на первый год: '))
-second_year = int(input('Повышение на второй год: '))
+A = int(input('Введите первое число: '))
+B = int(input('Введите второе число: '))
 
-first_year_prices = [price * (1 + first_year / 100) for price in list_prices]
-second_year_prices = [price * (1 + second_year / 100) for price in first_year_prices]
-print('Сумма цен за каждый год:', round(sum(list_prices), 2), round(sum(first_year_prices), 2),
-      round(sum(second_year_prices), 2))
+even_numbers = [num for num in range(A, B + 1) if num % 2 == 0]
+
+print(even_numbers)
+
+print('-' * 20)
+
+
+print('Задача 2. Магазин')
+
+import random
+
+original_prices = [round(random.uniform(-100, 100), 2) for _ in range(12)]
+print(original_prices)
+new_prices = [i if i > 0 else 0 for i in original_prices]
+
+print(new_prices)
+
+print('-' * 20)
+
+
+print('Задача 3. Отряды')
+
+unit_1 = [random.randint(50, 80) for unit in range(10)]
+unit_2 = [random.randint(30, 60) for unit in range(10)]
+
+unit_3 = ['Погиб' if unit_1[i_unit] + unit_2[i_unit] > 100
+          else 'Выжил'
+          for i_unit in range(10)]
+
+print('Урон первого отряда:', unit_1)
+print('Урон второго отряда:', unit_2)
+print('Состояние третьего отряда:', unit_3)
