@@ -40,3 +40,12 @@ print('-' * 20)
 
 print('Задача 3. Различные цифры')
 
+text = set(input('Введите строку: '))
+
+sym_set = set('1234567890')
+result_1 = ''.join(text.intersection(sym_set))
+result_2 = set()
+for sym in text:
+    if '0' <= sym <= '9':
+        result_2.add(sym)
+print('Различные цифры строки:\n', result_1, '\n', ''.join(result_2))
