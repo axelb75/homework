@@ -38,7 +38,8 @@ try:
         if is_palindrome(word):
             quality += 1
     print('Количество слов, из которых можно получить палиндром:', quality)
-
+    words.close()
+    errors.close()
 except FileNotFoundError:
     print('Файл отсутствует.')
 except ValueError as exc:
