@@ -32,7 +32,6 @@ toyota_1.view_info(), toyota_2.view_info(), toyota_3.view_info()
 
 print('Задача 2. Семья')
 
-
 class Family:
     name = ''
     money = 0
