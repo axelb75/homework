@@ -70,9 +70,10 @@ print(war_ship, '\nВооружение:', war_ship.get_weapon())
 war_ship.attack()
 
 print('-' * 20)
+print()
 
 
-print('\nЗадача 2. Роботы')
+print('Задача 2. Роботы')
 
 class Robot():
     def __init__(self, num_model):
@@ -156,6 +157,7 @@ print(submarine)
 submarine.operate()
 
 print('-' * 20)
+print()
 
 
 print('Задача 3. Кастомные исключения')
